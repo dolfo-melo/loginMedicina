@@ -3,40 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/agendamento.css">
-    <title>Yuká Massagem - Agendamento</title>
+    <link rel="stylesheet" href="agendamento.css">
+    <title>Yuká Medicina</title>
 </head>
 <body>
+    <header>
+        <img src="assets/yukaLogo.png" alt="logo">
+        <nav>
+            <a class="active" href="">Home</a>
+            <a href="">Sobre Nós</a>
+            <a href="">Chacras</a>
+            <a href="">Breathwork</a>
+            <a href="">Terapia Reiki</a>
+            <a href="">Formulário</a>
+        </nav>
+    </header>
     <main>
         <section class="mainPage">
-            <div class="paralax1"></div>
-            <div class="logo">
-                <img class="agendLogo" src="assets/yukaLogo.png" alt="logo">
-            </div>
-            <div class="paralax2"></div>
+            <img class="sunElement" src="assets/sunElement.png" alt="sunElement">
+            <img class="rightElements" src="assets/rightElements.png" alt="rightElements">
+            <img class="rightBottomElement" src="assets/rightBottomElement.png" alt="rightBottomElement">
+            <h1>Conheça o poder <br> da Medicina + Consciência</h1>
         </section>
+        <section class="sobreNos">
+                <h1>Sobre Nós</h1>
+                <p>Somos uma clínica dedicada a promover a saúde e o bem-estar através de abordagens integrativas que combinam medicina tradicional e práticas conscientes. Nossa missão é oferecer cuidados personalizados que atendam às necessidades físicas, emocionais e espirituais de nossos pacientes.</p>
+        </section>
+        <section class="tratamentos">
+                <div class="chacra">
+                    <h1>Chacra</h1>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, harum maiores quibusdam commodi iste adipisci saepe ullam voluptatem rerum, in magni officiis eligendi sequi dicta ex earum! Earum, illum veniam!
+                </div>
+                <div class="breatwork">
+                    <h1>Breathwork</h1>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, harum maiores quibusdam commodi iste adipisci saepe ullam voluptatem rerum, in magni officiis eligendi sequi dicta ex earum! Earum, illum veniam!
+                </div>
+                <div class="reiki">
+                    <h1>Terapia Reiki</h1>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, harum maiores quibusdam commodi iste adipisci saepe ullam voluptatem rerum, in magni officiis eligendi sequi dicta ex earum! Earum, illum veniam!
+                </div>
         <section class="formulario">
             <div class="container">
                 <h1>Agende sua consulta</h1>
-                <form action="">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
-                    <label for="telefone">Número de Telefone</label>
-                    <input type="tel" name="telefone" id="telefone" minlength="10">
-                    <label for="idade">Idade</label>
-                    <input type="number" name="idade" id="idade" maxlength="3">
-                    <label for="data">Data</label>
-                    <input type="date" name="data" id="data">
-                    <label for="hora">Hora</label>
-                    <input type="time" name="hora" id="hora">
-                    <label for="especialidade">Área Média</label>
-                    <select name="especialidade" id="especialidade"></select>
-                </form>    
+                    <form action="">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email">
+                        <label for="telefone">Número de Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" minlength="10">
+                        <label for="idade">Idade</label>
+                        <input type="number" name="idade" id="idade" maxlength="3">
+                        <label for="data">Data</label>
+                        <input type="date" name="data" id="data">
+                        <label for="hora">Hora</label>
+                        <input type="time" name="hora" id="hora">
+                        <label for="especialidade">Área Média</label>
+                        <select name="especialidade" id="especialidade"></select>
+                    </form>    
             </div>
         </section>
 
     </main>
+    <!-- SCRIPTS - separei um especifico para o efeito Parallax -->
+    <script src="js/apps.js"></script>
 </body>
 </html>

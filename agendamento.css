@@ -1,0 +1,150 @@
+:root{
+    --verde-escuro: #297849;
+    --verde-claro: #99c84c;
+    --roxo-top: #332b98;
+    --roxo-bottom: #6c5ce7;
+}
+
+* {
+    padding: 0pc;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*---------------------------------- HEADER E NAV ----------------------------------*/
+header{
+    width: 100vw;
+    height:100px;
+    background-color: #8db771;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header img{
+    width:80px;
+}
+
+nav{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+nav a{
+    color: #fdfdfd;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+}
+
+nav a:hover{
+    color: var(--roxo-bottom);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+nav a.active{
+    color: var(--roxo-top);
+    text-shadow: 2px 2px 8px #fdfdfd;
+}
+
+/*---------------------------------- MAIN E CONTAINER ----------------------------------*/
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainPage{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fdfdfd;
+    text-shadow: 2px 2px 8px var(--verde-claro);
+    text-align: center;
+    font-size: 24px;
+}
+
+.mainPage img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+/*---------------------------------- FORMULARIO ----------------------------------*/
+.sobreNos{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/background3.png);
+    background-size: cover;
+    background-repeat: no-repeat;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15%;
+}
+
+.sobreNos h1{
+    margin-top: 15%;
+}
+
+.sobreNos h1,p{
+    margin-bottom: 3%;
+}
+
+.tratamentos{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/background4.png);
+    background-size: cover;
+    background-repeat: no-repeat;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    padding: 15%;
+}
+
+.tratamentos div{
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.formulario{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/background2.png);
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .container{
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/formElement.png);
+    display: block;
+    justify-content: center;
+    align-items: center;
+} */
