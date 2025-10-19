@@ -43,7 +43,7 @@
     
     if(usuario === user & senha === password){
         window.alert("Login efetuado com sucesso. Redirecioando")
-        document.open("admin.html")
+        document.open("lista.html")
         return messageErro.textContent = ""
     } else {
         userInput.value = "" 
