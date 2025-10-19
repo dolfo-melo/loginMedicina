@@ -1,0 +1,75 @@
+@import "{{ site.theme }}";
+
+:root{
+    --verde-escuro: rgb(41, 120, 73);
+    --verde-claro: rgb(153, 200, 76);
+    --roxo-top: rgb(51, 43, 152);
+    --roxo-bottom: rgb(108, 92, 231);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/background2.png);
+    background-position: center;
+    }
+
+.container{
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(41, 120, 73, 0.7);
+    border-radius: 50px;
+}
+
+.mainContainer{
+    width: 60%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.mainContainer button{
+    width: 80%;
+    height: 15%;
+}
+
+.imgLogo{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+.agendamento {
+    width: 60%;
+    height: 30%;
+    display: none;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    background: rgba(153, 200, 76, 0.8);
+    gap: 2px;
+    border-radius: 30px;
+}
+
+.agendamento p{
+    margin-top: 2%;
+}

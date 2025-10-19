@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/agendamento.css">
+    <link rel="stylesheet" href="src/style.css">
     <title>Yuká Medicina</title>
 </head>
 <body>
@@ -66,17 +66,17 @@
                 <h1>Agende sua consulta</h1>
                     <form action="">
                         <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nome">
+                        <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
                         <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" placeholder="usuario@email.com">
                         <label for="telefone">Número de Telefone</label>
-                        <input type="tel" name="telefone" id="telefone" minlength="10">
+                        <input type="tel" name="telefone" id="telefone" placeholder="(DDD)98967-9859" minlength="10" required>
                         <label for="idade">Idade</label>
-                        <input type="number" name="idade" id="idade" maxlength="3">
+                        <input type="number" name="idade" id="idade" max="120" placeholder="Digite sua Idade" required>
                         <label for="data">Data</label>
-                        <input type="date" name="data" id="data">
+                        <input type="date" name="data" id="data" min="20-10-2025" max="31-12-2999" required>
                         <label for="hora">Hora</label>
-                        <input type="time" name="hora" id="hora">
+                        <input type="time" name="hora" id="hora" min="07:00" max="22:00" required>
                         <label for="especialidade">Área Média</label>
                         <select name="especialidade" id="especialidade">
                             <option value="chacra">Chacra</option>
@@ -92,7 +92,7 @@
     <footer>
         <p>Yuká Medicina by dolfo-melo &copy; 2025</p>
     </footer>
-    <!-- SCRIPTS -->
-    <script src="src/js/main.js"></script>
 </body>
+<!-- SCRIPTS -->
+<script src="main.js"></script>
 </html>

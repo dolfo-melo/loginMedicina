@@ -23,7 +23,8 @@
 // Funcionalidade Gerais
     
     // Variáveis Globais
-    let listaAdmin = []
+    var listaAdmin = []
+    var agendamento = {}
 
     // Validação Login - login.html
     function validarLogin(event){
@@ -42,10 +43,12 @@
     
     if(usuario === user & senha === password){
         window.alert("Login efetuado com sucesso. Redirecioando")
-        return document.open("admin.html")
-        messageErro.textContent = ""
+        document.open("admin.html")
+        return messageErro.textContent = ""
     } else {
-        messageErro.textContent = "Credenciais Inválidas"
+        userInput.value = "" 
+        passInput.value = "" 
+        return messageErro.textContent = "Credenciais Inválidas"
     }
     }
 
@@ -64,7 +67,7 @@
         const especialidade = document.querySelector("select[name='especialidade']").value
 
         // Objeto para armazenar no LocalStorage
-        const agendamento = {
+        agendamento = {
             nome,
             email,
             telefone,
@@ -80,9 +83,23 @@
 
         // Criando uma lista para melhor gerenciamento dos dados do formulário
         listaAdmin = Object.values(agendamento)
+
+        return listaAdmin
     }
     
     // Lista Formulário - admin.html
-    function admin(event){
-        
+    function listaAgendamento(event){
+        const showBtn = document.querySelector("button[class='showBtn']")
+        const listAgend = document.querySelector("div[class='agendamento']")
+        const listText =  document.querySelectorAll("p[class='agendText']")
+
+        showBtn.style.display = "none"
+        listAgend.style.display = "flex"
+        listAgend.style.height = "60%"
+        listAgend.style.marginBottom = "30px"
+        listAgend.style.marginTop = "0"
+   
+        listaAdmin.array.forEach(element => {
+               listText.textContent = listaAdmin[i] 
+            });
     }
