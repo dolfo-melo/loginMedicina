@@ -1,25 +1,3 @@
-// Parallax Effect
-    // Selecionando elementos do DOM
-    const rightElements = document.querySelector("img[class='rightElements']")
-    const leftElements = document.querySelector("img[class='leftElements']")
-    const sunElement = document.querySelector("img[class='sunElement']")
-    const textMain = document.querySelector("h1[class='mainTitle']")
-    const ajuMap = document.querySelector("img[class='mapaAju']")
-
-    // Pegando a posição inicial do scroll, usando let pois irá variar
-    let scrollPosition = window.scrollY
-
-    // Adicionando um evento de scroll na janela
-    window.addEventListener('scroll', () => {
-        scrollPosition = window.scrollY
-
-    // Movendo os elementos com base na posição do scroll
-        rightElements.style.left = scrollPosition * 0.5 + 'px'
-        leftElements.style.left = -scrollPosition * 0.5 + 'px'
-        sunElement.style.left = scrollPosition * 0.5 + 'px'
-        textMain.style.marginTop = scrollPosition * 0.5 + 'px'
-        })
-
 // Funcionalidade Gerais
     
     // Variáveis Globais
@@ -27,7 +5,7 @@
     var agendamento = {}
 
     // Validação Login - login.html
-    function validarLogin(event){
+    function validarAdmin(event){
     
     event.preventDefault()
     const userInput = document.getElementById("usuario")
@@ -41,11 +19,13 @@
     const usuario = userInput.value
     const senha = passInput.value
     
-    if(usuario === user & senha === password){
+    if(usuario === user && senha === password){
+        messageErro.textContent = ""
         window.alert("Login efetuado com sucesso. Redirecioando")
-        document.open("lista.html")
-        return messageErro.textContent = ""
+        return document.open('lista.html')
+        
     } else {
+        userInput.focus()
         userInput.value = "" 
         passInput.value = "" 
         return messageErro.textContent = "Credenciais Inválidas"
@@ -84,6 +64,14 @@
         // Criando uma lista para melhor gerenciamento dos dados do formulário
         listaAdmin = Object.values(agendamento)
 
+        nome.reset()
+        email.reset()
+        telefone.reset()
+        idade.reset()
+        data.reset()
+        hora.reset()
+        especialidade.reset()
+
         return listaAdmin
     }
     
@@ -98,8 +86,27 @@
         listAgend.style.height = "60%"
         listAgend.style.marginBottom = "30px"
         listAgend.style.marginTop = "0"
-   
-        listaAdmin.array.forEach(element => {
-               listText.textContent = listaAdmin[i] 
-            });
+        listText.textContent = listaAdmin.values
     }
+
+// Parallax Effect
+    // Selecionando elementos do DOM
+    const rightElements = document.querySelector("img[class='rightElements']")
+    const leftElements = document.querySelector("img[class='leftElements']")
+    const sunElement = document.querySelector("img[class='sunElement']")
+    const textMain = document.querySelector("h1[class='mainTitle']")
+    const ajuMap = document.querySelector("img[class='mapaAju']")
+
+    // Pegando a posição inicial do scroll, usando let pois irá variar
+    let scrollPosition = window.scrollY
+
+    // Adicionando um evento de scroll na janela
+    window.addEventListener('scroll', () => {
+        scrollPosition = window.scrollY
+
+    // Movendo os elementos com base na posição do scroll
+        rightElements.style.left = scrollPosition * 0.5 + 'px'
+        leftElements.style.left = -scrollPosition * 0.5 + 'px'
+        sunElement.style.left = scrollPosition * 0.5 + 'px'
+        textMain.style.marginTop = scrollPosition * 0.5 + 'px'
+        })
