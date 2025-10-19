@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>Yuká Medicina - Login</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <img class="mainLogo" src="src/assets/yukaLogo.png" alt="logo">
+            <p>Massagens que vão além do clássico tirar nódulos e tensões, aqui resgatamos a sua alma e deixamos você livre para voar na <strong>Vida</strong></p>
+            <div class="loginMain">
+                <h3>Realizar login</h3>
+                <label class="usuario" for="usuario">Usuário</label>
+                <input type="text" name="usuario" id="usuario">
+                <label class="senha" for="senha">Senha</label>
+                <input type="password" name="senha" id="senha">
+                <button class="loginBtn" id="loginBtn" type="submit" onclick="validarLogin(event)">Entrar</button>
+                <p class="errorMessage"></p>
+            </div>
+        </div>
+    </main>
+    <script src="src/js/main.js"></script>
+</body>
+</html>

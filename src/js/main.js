@@ -1,4 +1,3 @@
-
 function validarLogin(event){
     
     event.preventDefault()

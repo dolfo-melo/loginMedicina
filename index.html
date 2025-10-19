@@ -3,25 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
-    <title>Yuká Massagem</title>
+    <link rel="stylesheet" href="src/agendamento.css">
+    <title>Yuká Medicina</title>
 </head>
 <body>
+    <header>
+        <img src="src/assets/yukaLogo.png" alt="logo">
+        <nav>
+            <a href="#mainPage">Home</a>
+            <a href="#tratamentos">Tratamentos</a>
+            <a href="#formulario">Formulário</a>
+            <a href="login.html">Admin</a>
+        </nav>
+    </header>
     <main>
-        <div class="container">
-            <img class="mainLogo" src="src/assets/yukaLogo.png" alt="logo">
-            <p>Massagens que vão além do clássico tirar nódulos e tensões, aqui resgatamos a sua alma e deixamos você livre para voar na <strong>Vida</strong></p>
-            <div class="loginMain">
-                <h3>Realizar login</h3>
-                <label class="usuario" for="usuario">Usuário</label>
-                <input type="text" name="usuario" id="usuario">
-                <label class="senha" for="senha">Senha</label>
-                <input type="password" name="senha" id="senha">
-                <button class="loginBtn" id="loginBtn" type="submit" onclick="validarLogin(event)">Entrar</button>
-                <p class="errorMessage"></p>
+        <section class="mainPage" id="mainPage">
+            <img class="sunElement" src="src/assets/sunElement.png" alt="sunElement">
+            <img class="rightElements" src="src/assets/rightElements.png" alt="rightElements">
+            <img class="leftElements" src="src/assets/leftElements.png" alt="leftElements">
+            <h1 class="mainTitle">Conheça o poder <br> da Medicina + Consciência</h1>
+            <div class="chacraAnimation">
+                <img class="chacras" src="src/assets/muladharaMandala.png" alt="chacraRaiz" style="--i:1">
+                <img class="chacras" src="src/assets/swadhisthanaMandala.png" alt="chacraBaco" style="--i:2">
+                <img class="chacras" src="src/assets/manipuraMandala.png" alt="chacraUmbilical" style="--i:3">
+                <img class="chacras" src="src/assets/anahataMandala.png" alt="chacraCardiaco" style="--i:4">
+                <img class="chacras" src="src/assets/vishuddhaMandala.png" alt="chacraLaringeo" style="--i:5">
+                <img class="chacras" src="src/assets/ajnaMandala.png" alt="chacraCentral" style="--i:6">
+                <img class="chacras" src="src/assets/sahasraraMandala.png" alt="chacraCoronario" style="--i:7">
             </div>
-        </div>
+        </section>
+        <section class="tratamentos" id="tratamentos">
+            <h1>Tratamentos Disponíveis</h1>
+            <div class="tratContainer">
+                        <video class="clip"  autoplay loop muted plays-inline>
+                            <source src="src/assets/videos/chacra.mp4" type="video/mp4">
+                        </video>
+                        <h1>Chacra</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem doloribus. Fuga consequatur minus aspernatur quis at? Non reprehenderit fuga omnis saepe, placeat asperiores pariatur autem eligendi error officia deserunt nulla laudantium quaerat numquam atque consequatur quia quos sapiente odit distinctio neque dolores ab inventore. Tenetur reprehenderit iste animi dolore?</p>
+            </div>
+            <div class="tratContainer">
+                    <video class="clip"  autoplay loop muted plays-inline>
+                                <source src="src/assets/videos/breathwork.mp4" type="video/mp4">
+                    </video>
+                    <h1>Breathwork</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem doloribus. Fuga consequatur minus aspernatur quis at? Non reprehenderit fuga omnis saepe, placeat asperiores pariatur autem eligendi error officia deserunt nulla laudantium quaerat numquam atque consequatur quia quos sapiente odit distinctio neque dolores ab inventore. Tenetur reprehenderit iste animi dolore?</p>
+            </div>
+            <div class="tratContainer">
+                        <video class="clip"  autoplay loop muted plays-inline>
+                                    <source src="src/assets/videos/reiki.mp4" type="video/mp4">
+                        </video>
+                        <h1>Terapia Reiki</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quidem doloribus. Fuga consequatur minus aspernatur quis at? Non reprehenderit fuga omnis saepe, placeat asperiores pariatur autem eligendi error officia deserunt nulla laudantium quaerat numquam atque consequatur quia quos sapiente odit distinctio neque dolores ab inventore. Tenetur reprehenderit iste animi dolore?</p>
+            </div>
+            <h4 class="localizacao">Localização</h4>
+            <div class="tratContainer">
+                                <img class="mapaAju" src="src/assets/mapaAju.png" alt="mapaAju" style="--mapaAju:1">
+            </div>
+        </section>
+        <section class="formulario" id="formulario">
+            <img class="elementoCentral" src="src/assets/formElement.png" alt="elemento">
+            <div class="formContainer">
+                <h1>Agende sua consulta</h1>
+                    <form action="">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email">
+                        <label for="telefone">Número de Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" minlength="10">
+                        <label for="idade">Idade</label>
+                        <input type="number" name="idade" id="idade" maxlength="3">
+                        <label for="data">Data</label>
+                        <input type="date" name="data" id="data">
+                        <label for="hora">Hora</label>
+                        <input type="time" name="hora" id="hora">
+                        <label for="especialidade">Área Média</label>
+                        <select name="especialidade" id="especialidade">
+                            <option value="chacra">Chacra</option>
+                            <option value="breathwork">Breathwork</option>
+                            <option value="reiki">Terapia Reiki</option>
+                        </select>
+                        <button class="cadastroBtn" type="" onclick="">Enviar Formulário</button>
+                    </form>    
+            </div>
+        </section>
+
     </main>
+    <footer>
+        <p>Yuká Medicina by dolfo-melo &copy; 2025</p>
+    </footer>
+    <!-- SCRIPTS - separei um especifico para o efeito Parallax -->
     <script src="src/js/main.js"></script>
+    <script src="src/js/parallax.js"></script>
 </body>
 </html>
