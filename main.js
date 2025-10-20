@@ -41,13 +41,13 @@
     if(usuario === user.value && senha === password.value){
         messageErro.textContent = ""
         window.alert("Login efetuado com sucesso. Redirecioando")
-        return document.open("lista.html")
+        window.location.href = "lista.html"
         
     } else {
         userInput.focus()
         userInput.value = "" 
         passInput.value = "" 
-        return messageErro.textContent = "Credenciais Inválidas"
+        messageErro.textContent = "Credenciais Inválidas"
     }
     }
 
