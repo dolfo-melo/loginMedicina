@@ -78,7 +78,7 @@ main{
     color: #fdfdfd;
     border-radius: 15px;
     gap: 8px;
-    z-index: 3;
+    z-index: 2;
 }
 
 .loginMain h3 {
@@ -132,7 +132,7 @@ main{
     margin-top: 50%;
     margin-left: 50%;
     overflow: visible;
-    z-index: 2;
+    z-index: 3;
 }
 
 .chacraAnimation img{
