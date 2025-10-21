@@ -25,7 +25,6 @@
     // Variáveis Globais
     var listaAdmin = []
     var agendamento = {}
-    var listaPage = fetch(lista.html)
 
     // Validação Login - login.html
     function validarAdmin(event){
@@ -42,7 +41,11 @@
     if(usuario === user.value && senha === password.value){
         messageErro.textContent = ""
         window.alert("Login efetuado com sucesso. Redirecioando")
+<<<<<<< HEAD
         window.location.href = lista.html
+=======
+        return document.open("lista.html")
+>>>>>>> 8079606caa3efe251884f0c69c0e81bbfc1491c3
         
     } else {
         userInput.focus()
