@@ -117,21 +117,23 @@ body
     
     .chacraAnimation{
         position: absolute;
-        width: 250px;
-        height: 250px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        width: 1920px;
+        height: 1080px; 
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        overflow: visible;  
+        margin-bottom: 200px; 
     }
 
     .chacraAnimation img{
-        position: sticky;
-        width: 150px;
-        height: 150px;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         transform: rotate(calc(360deg/7 * var(--i)));
         transform-origin: 50px;
         animation: animatedChacra 10s linear infinite;
@@ -142,8 +144,20 @@ body
         position: absolute;
         width: 150px;
         height: 150px;
+        top: 0;
+        left: 0;
         transform: rotate(calc(-360deg/7 * var(--i)));
-        animation: animatedChacraBox 5s linear infinite;
+        animation: animatedChacraBox 15s linear infinite;
+    }
+    
+    .chacraAnimation .chacra img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: rotate(calc(-360deg/7 * var(--i)));
+        animation: animatedChacraBox 15s linear infinite;
     }
 
     @keyframes animatedChacra {
@@ -174,7 +188,7 @@ body
         flex-direction: column;
         justify-content: center;
         align-items: center; 
-        margin: 2%;
+        margin: 15px;
     }
 
     .tratamentos h1{
@@ -186,7 +200,7 @@ body
     }
 
     .tratamentos p{
-        width: 80%;
+        width: 700px;
         font-size: 20px;
         color: var(--verde-claro);
         text-shadow: 0px 2px 6px rgba(0,0,0, 1);
@@ -197,23 +211,24 @@ body
 
     .tratContainer{
         width: 100%;
-        height: 70vh;
+        height: 60vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 2%;
+        margin-bottom: 50px;
+        margin-top: 50px;
     }
 
     .tratContainer .clip{
-        width: 700px;
-        height: 400px;
+        width: 500px;
+        height: 300px;
         border-radius: 500px;
         border: 5px solid #297849;
     }
+    
     .tratContainer{
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -224,20 +239,20 @@ body
         margin-bottom: 10px;
         color: #fdfdfd;
         text-shadow: 2px 2px 8px var(--roxo-top);
-        margin-top: 50px;
+
     }
     
     .tratContainer p{
         text-align: center;
-        width: 40%;
+        width: 700px;
     }
 
     .localizacao{
-        margin-top: 50px;
         font-size: 64px;
         font-weight: bold;
         color: #fdfdfd;
         text-shadow: 2px 2px 8px var(--roxo-top);
+        margin-top: 50px;
     }
 /*---------------------------------- FORMULARIO ----------------------------------*/
 
@@ -253,7 +268,7 @@ body
     .formulario .elementoCentral{
     width: 100%;
     height: 100%;
-    position: sticky;
+    position: relative;
     z-index: 1;
     }
 
