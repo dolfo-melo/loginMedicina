@@ -105,5 +105,5 @@
         listAgend.style.height = "60%"
         listAgend.style.marginBottom = "30px"
         listAgend.style.marginTop = "0"
-        listText.textContent = listaAdmin.values
+        listText.textContent = listaAdmin
     }
