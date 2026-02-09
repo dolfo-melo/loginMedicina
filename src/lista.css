@@ -39,7 +39,7 @@ main{
 
 .mainContainer{
     width: 60%;
-    height: 40%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -49,13 +49,14 @@ main{
 
 .mainContainer button{
     width: 80%;
-    height: 15%;
+    height: 20%;
 }
 
 .imgLogo{
     width: 200px;
     height: 200px;
     border-radius: 100%;
+    margin-top: 10px;
 }
 
 .agendamento {
@@ -73,3 +74,40 @@ main{
 .agendamento p{
     margin-top: 2%;
 }
+
+.mainTitle{
+    margin-bottom: 10px;
+}
+
+.showBtn{
+    width: 50%;
+    height: 50%;
+    border-radius: 25px;
+    background-color: var(--roxo-top);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.showBtn:hover{
+    background-color: var(--roxo-bottom);
+    transition: 1s;
+}
+
+
+.backBtn{
+    width: 50%;
+    height: 15%;
+    border-radius: 25px;
+    background-color: var(--roxo-top);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.backBtn:hover{
+    background-color: var(--roxo-bottom);
+    transition: 1s;
+}
+
+

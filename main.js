@@ -1,7 +1,5 @@
 // Parallax Effect
     // Selecionando elementos do DOM
-    const rightElements = document.querySelector("img[class='rightElements']")
-    const leftElements = document.querySelector("img[class='leftElements']")
     const sunElement = document.querySelector("img[class='sunElement']")
     const textMain = document.querySelector("h1[class='mainTitle']")
     const ajuMap = document.querySelector("img[class='mapaAju']")
@@ -14,33 +12,28 @@
         scrollPosition = window.scrollY
 
     // Movendo os elementos com base na posição do scroll
-        rightElements.style.left = scrollPosition * 0.5 + 'px'
-        leftElements.style.left = -scrollPosition * 0.5 + 'px'
         sunElement.style.left = scrollPosition * 0.5 + 'px'
         textMain.style.marginTop = scrollPosition * 0.5 + 'px'
         })
 
 // Funcionalidade Gerais
-    
-    // Variáveis Globais
-    var listaAdmin = []
-    var agendamento = {}
 
     // Validação Login - login.html
-    function validarAdmin(event){
-    
+    function validarLogin(event){
     event.preventDefault()
-    const user = document.getElementById("usuario")
-    const password = document.getElementById("senha")
-    const messageErro = document.querySelector("p[class='errorMessage']")
+
+    const usuario = document.getElementById("usuario")
+    const senha = document.getElementById("senha")
+    const messageErro = document.querySelector(".errorMessage")
     messageErro.textContent = ""
     
-    const usuario = "admin"
-    const senha = "12345"
+    const user = "admin"
+    const password = "12345"
     
-    if(usuario === user.value && senha === password.value){
+    if(user === usuario.value && password === senha.value){
         messageErro.textContent = ""
         window.alert("Login efetuado com sucesso. Redirecioando")
+<<<<<<< HEAD
         window.location.href = "lista.html"
         
     } else {
@@ -48,6 +41,15 @@
         userInput.value = "" 
         passInput.value = "" 
         messageErro.textContent = "Credenciais Inválidas"
+=======
+        window.location.href = 'lista.html'
+
+    } else {
+        messageErro.innerHTML = "Credenciais Inválidas"
+        usuario.focus()
+        usuario.value = "" 
+        senha.value = "" 
+>>>>>>> 0973f8d6222384685faec3fed3d187bb616be566
     }
     }
 
@@ -57,6 +59,7 @@
         event.preventDefault()
 
         // Variáveis do formulário
+        const formContent = document.querySelector(".formContent")
         const nome = document.querySelector("input[name='nome']").value
         const email = document.querySelector("input[name='email']").value
         const telefone = document.querySelector("input[name='telefone']").value
@@ -65,8 +68,8 @@
         const hora = document.querySelector("input[name='hora']").value
         const especialidade = document.querySelector("select[name='especialidade']").value
 
-        // Objeto para armazenar no LocalStorage
-        agendamento = {
+        // Armazenando dados do localStorage em um Objeto
+        agendamentos = {
             nome,
             email,
             telefone,
@@ -77,33 +80,45 @@
         }
 
         // Armazenar no LocalStorage
-        localStorage.setItem("novoAgendamento", JSON.stringify(agendamento))
+        localStorage.setItem("novoAgendamento", JSON.stringify(agendamentos))
         alert("Cadastro Realizado!!")
-
-        // Criando uma lista para melhor gerenciamento dos dados do formulário
-        listaAdmin = Object.values(agendamento)
-
-        nome.reset()
-        email.reset()
-        telefone.reset()
-        idade.reset()
-        data.reset()
-        hora.reset()
-        especialidade.reset()
-
-        return listaAdmin
+        // listaAgendamento(agendamentos) - Implementação Inválida
+        formContent.reset()
     }
     
     // Lista Formulário - admin.html
-    function listaAgendamento(event){
-        const showBtn = document.querySelector("button[class='showBtn']")
-        const listAgend = document.querySelector("div[class='agendamento']")
-        const listText =  document.querySelectorAll("p[class='agendText']")
+    /* function listaAgendamento(agendamentos){
+        const showBtn = document.querySelector(".showBtn")
+        const listAgend = document.querySelector(".agendamento")
+        const listNome =  document.querySelectorAll(".listNome")
+        const listEmail =  document.querySelectorAll(".listEmail")
+        const listIdade =  document.querySelectorAll(".listIdade")
+        const listTelefone =  document.querySelectorAll(".listTelefone")
+        const listData =  document.querySelectorAll(".listData")
+        const listHora =  document.querySelectorAll(".listHora")
+        const listEspecialidade =  document.querySelectorAll(".listEspecialidade")
 
+        
         showBtn.style.display = "none"
         listAgend.style.display = "flex"
         listAgend.style.height = "60%"
         listAgend.style.marginBottom = "30px"
         listAgend.style.marginTop = "0"
+<<<<<<< HEAD
         listText.textContent = listaAdmin
     }
+=======
+        listNome.innerHTML = `Nome: ${agendamentos.nome}` 
+        listEmail.innerHTML = `E-mail: ${agendamentos.email}` 
+        listTelefone.innerHTML = `Telefone: ${agendamentos.telefone}` 
+        listIdade.innerHTML = `Idade: ${agendamentos.idade}` 
+        listData.innerHTML = `Data: ${agendamentos.data}` 
+        listHora.innerHTML = `Hora: ${agendamentos.hora}` 
+        listEspecialidade.innerHTML = `Especialidade: ${agendamentos.especialidade}` 
+    }
+
+    // Função para voltar ao início do documento
+    function voltarAgendamento(event){
+        document.location.href = "lista.html"
+    } */
+>>>>>>> 0973f8d6222384685faec3fed3d187bb616be566
